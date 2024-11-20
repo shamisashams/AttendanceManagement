@@ -1,0 +1,4 @@
+1. Python face_recognition package
+2. json (to store data)
+3. webcam (for live detection)
+4. 
