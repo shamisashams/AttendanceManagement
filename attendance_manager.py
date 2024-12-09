@@ -1,5 +1,6 @@
 from face_detector import FaceDetector
 import face_recognition
+import pandas as pd
 
 class AttendanceManager:
     def __init__(self, user_db):
@@ -20,6 +21,8 @@ class AttendanceManager:
                     })
         return attendance
 
-    def generate_report(self, attendance, file_name=""):
-    
+    def generate_report(self, attendance, file_name="reports/attendance_report.csv"):
+        df = pd.DataFrame(attendance)
+        df.to_csv(file_name, index=False)
+        print(f'Report saved to {file_name}')
         pass
