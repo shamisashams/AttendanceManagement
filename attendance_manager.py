@@ -25,4 +25,4 @@ class AttendanceManager:
         df = pd.DataFrame(attendance)
         df.to_csv(file_name, index=False)
         print(f'Report saved to {file_name}')
-        pass
+        
