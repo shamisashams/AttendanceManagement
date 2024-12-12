@@ -1,10 +1,14 @@
-import face_recognition
+
 from face_detector import FaceDetector
 from user_database import UserDatabase
+from attendance_manager import AttendanceManager
 
+database = UserDatabase()
+detector = FaceDetector()
+manager = AttendanceManager()
 
-image = face_recognition.load_image_file('./img/groups/team2.jpg')
-face_locations = face_recognition.face_locations(image)
+database.add_user("Bill Gates", "001", "img/known/bill_gates")
+attendance = manager.mark_attendance("img/groups/bill-steve-elon.jpg")
+manager.generate_report(attendance)
 
-print(f'number of faces in the frame: {len(face_locations)}')
-
+print(attendance)
