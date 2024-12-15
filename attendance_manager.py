@@ -19,6 +19,7 @@ class AttendanceManager:
                         "id": user_id,
                         "name": user["name"],
                         "timestamp": str(datetime.datetime.now())
+
                     })
         return attendance
 
@@ -26,4 +27,3 @@ class AttendanceManager:
         df = pd.DataFrame(attendance)
         df.to_csv(file_name, index=False)
         print(f'Report saved to {file_name}')
-        
