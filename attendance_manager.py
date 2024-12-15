@@ -18,7 +18,7 @@ class AttendanceManager:
                     attendance.append({
                         "id": user_id,
                         "name": user["name"],
-                        "timestap": str(datetime.datetime.now())
+                        "timestamp": str(datetime.datetime.now())
                     })
         return attendance
 
