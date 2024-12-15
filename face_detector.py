@@ -10,6 +10,3 @@ class FaceDetector:
         face_encodings = face_recognition.face_encodings(image, face_locations)
         return face_encodings
 
-
-# person1 = FaceDetector()
-# print(person1.detect_faces('./img/known/Bill Gates.jpg'))
