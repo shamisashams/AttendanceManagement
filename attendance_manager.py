@@ -1,6 +1,7 @@
 from face_detector import FaceDetector
 import face_recognition
 import pandas as pd
+import datetime
 
 class AttendanceManager:
     def __init__(self, user_db):
@@ -16,8 +17,8 @@ class AttendanceManager:
                 if match[0]:
                     attendance.append({
                         "id": user_id,
-                        "name": user["name"]
-                        # "timestamp" dont forget to add 
+                        "name": user["name"],
+                        "timestap": str(datetime.datetime.now())
                     })
         return attendance
 
