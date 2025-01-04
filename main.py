@@ -2,7 +2,6 @@ from face_detector import FaceDetector
 from user_database import UserDatabase
 from attendance_manager import AttendanceManager
 
-
 database = UserDatabase()
 detector = FaceDetector()
 manager = AttendanceManager(database)
