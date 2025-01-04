@@ -4,10 +4,12 @@ from attendance_manager import AttendanceManager
 from face_recognition_attendance import FaceRecognitionAttendanceSystem
 from manual_attendance import ManualAttendanceSystem
 
+# Initialize User Database
 db = UserDatabase()
 detector = FaceDetector()
 manager = AttendanceManager(db)
 
+# Add sample user to the database
 db.add_user("Bill Gates", "001", "images/known/bill_gates.jpg")
 db.add_user("Elon Musk", "002", "images/known/elon_musk.jpg")
 
