@@ -1,7 +1,7 @@
 # Attendance Management System
 
 ## Overview
-The Attendance Management System is a Python-based application designed to log and manage attendance using both facial recognition and manual entry methods. It demonstrates key programming concepts such as object-oriented programming (OOP), inheritance, and modular design, making it an excellent addition to any portfolio.
+The Attendance Management System is a Python-based application designed to log and manage attendance using both facial recognition and manual entry methods. It demonstrates key programming concepts such as object-oriented programming (OOP), inheritance, and modular design.
 
 ## Features
 - **Facial Recognition Attendance**: Automatically marks attendance for users by recognizing their faces from an image.
