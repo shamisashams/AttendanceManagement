@@ -11,7 +11,7 @@ class UserDatabase:
         Initialize the user database.
 
         Args:
-            db_file (str): Path to the JSON file storing user data.
+            db_path (str): Path to the JSON file storing user data.
         """
         self.db_path = db_path
         self.users = self.load_users()
@@ -59,6 +59,6 @@ class UserDatabase:
                 user_id (str): The unique ID of the user.
 
             Returns:
-                dict: User details or None if not found.
+                dict: user details or none if not found.
         """
         return self.users.get(user_id)

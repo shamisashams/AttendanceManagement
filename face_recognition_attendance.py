@@ -15,7 +15,7 @@ class FaceRecognitionAttendanceSystem(AttendanceSystem):
         Args:
             user_db (UserDatabase): Instance of the user database.
         """
-        super().__init__()  # Call the parent constructor
+        super().__init__()  
         self.user_db = user_db
         self.face_detector = FaceDetector()
 

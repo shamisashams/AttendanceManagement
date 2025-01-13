@@ -9,7 +9,7 @@ class ManualAttendanceSystem(AttendanceSystem):
         """
             Initialize the manual attendance system.
         """
-        super().__init__()  # Call the parent constructor
+        super().__init__()  
 
     def mark_attendance_manually(self, user_id, name):
         """
