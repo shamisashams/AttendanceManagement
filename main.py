@@ -15,7 +15,6 @@ db.add_user("Dua Lipa", "003", "images/users/dualipa.png")
 
 # Manual Attendance System
 manual_system.mark_attendance_manually("004", "Philomena Cunk")
-manual_system.mark_attendance_manually("005", "Pablo Escobar")
 
 attendance = manager.mark_attendance("images/groups/dua_margot_billie.png")
 # Generate report of the attendees
