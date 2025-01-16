@@ -1,6 +1,5 @@
 import face_recognition
 import json
-from face_detector import FaceDetector
 
 class UserDatabase:
     """
