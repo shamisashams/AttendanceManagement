@@ -10,15 +10,13 @@ manual_system = ManualAttendanceSystem()
 manager = AttendanceManager(db, manual_system)
 
 # Add user to the database
-db.add_user("Taylor Swift", "001", "images/users/taylor_swift.png")
-db.add_user("Margot Robbie", "002", "images/users/margot_robbie.png")
-db.add_user("Dua Lipa", "003", "images/users/dualipa.png")
+db.add_user("Walter White", "001", "images/users/walter_white.png")
 
 # Manual Attendance System
-manual_system.mark_attendance_manually("004", "Philomena Cunk")
+manual_system.mark_attendance_manually("007", "Vince Gilligan")
 
 # Mark attandance in a group 
-attendance = manager.mark_attendance("images/groups/margot_taylor.png")
+attendance = manager.mark_attendance("images/groups/g-4.png")
 
 # Generate report of the attendees
 manager.generate_report(attendance)
