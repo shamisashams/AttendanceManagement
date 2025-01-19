@@ -23,3 +23,5 @@ attendance = manager.mark_attendance("images/groups/margot_taylor.png")
 # Generate report of the attendees
 manager.generate_report(attendance)
 
+
+
