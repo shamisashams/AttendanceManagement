@@ -15,17 +15,27 @@ class UserDatabase:
         self.db_path = db_path
         self.users = self.load_users()
 
+        # Ensure the file exists and is valid after initialization
+        self.save_users()
+
     def load_users(self):
         """
-            Load users from the JSON database file.
+            Load users from the JSON database file. If the file does not exist or is empty,
+            initialize an empty dictionary.
         """
         try:
             with open(self.db_path, 'r') as file:
-                return json.load(file)
-        except (FileNotFoundError, json.JSONDecodeError):
-              # Create an empty JSON file if none exists
-            self.users = {}
-            self.save_users()
+                # Load the file or return an empty dictionary if the file is empty
+                data = json.load(file)
+                return data if data else {}
+        except FileNotFoundError:
+            print(f"{self.db_path} not found. Initializing empty database.")
+            return {}
+        except json.JSONDecodeError:
+            print(f"Invalid JSON in {self.db_path}. Initializing empty database.")
+            # Return an empty dictionary if the file is missing or invalid
+            return {}
+            
 
 
     def add_user(self, name, user_id, image_path):
